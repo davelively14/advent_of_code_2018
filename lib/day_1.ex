@@ -9,12 +9,10 @@ defmodule Day1 do
   end
 
   def freq_repeat(path \\ "lib/assets/day_1.txt") do
-    list =
-      path
-      |> File.read!()
-      |> String.split("\n")
-
-    reduce(list)
+    path
+    |> File.read!()
+    |> String.split("\n")
+    |> reduce()
   end
 
   # Private functions
